@@ -28,7 +28,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/fonts/metropolis/fonts-metropolis.css"
             ],
             "scripts": []
           },
@@ -91,7 +92,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/fonts/metropolis/fonts-metropolis.css"
             ],
             "scripts": []
           }

@@ -1,0 +1,24 @@
+/* Default */
+@font-face {
+  font-family: "metropolis-default";
+  src: url("./Metropolis-Regular.otf");
+}
+
+/* Thin */
+@font-face {
+  font-family: "metropolis-thin";
+  src: url("./Metropolis-Light.otf");
+}
+
+/* Bold */
+@font-face {
+  font-family: "metropolis-bold";
+  src: url("./Metropolis-Bold.otf");
+}
+
+/* Italic */
+@font-face {
+  font-family: "metropolis-italic";
+  src: url("./Metropolis-RegularItalic.otf");
+}
+
