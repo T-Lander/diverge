@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain } = require("electron");
+const { app, BrowserWindow, ipcMain, IpcMessageEvent } = require("electron");
 const url = require("url");
 const path = require("path");
 const windowConfig = {
@@ -6,7 +6,12 @@ const windowConfig = {
   height: 800,
   minWidth: 800,
   minHeight: 600,
-  webPreferences: { nodeIntegration: true },
+  frame: false,
+  webPreferences: {
+    nodeIntegration: true,
+    contextIsolation: false
+  },
+  backgroundColor: '#FFF', // Makes rendering more crisp, for some reason
 };
 
 let mainWindow;
@@ -14,10 +19,11 @@ let mainWindow;
 function createWindow() {
   mainWindow = new BrowserWindow(windowConfig);
   mainWindow.removeMenu();
+  mainWindow.webContents.openDevTools();
 
   mainWindow.loadURL(
     url.format({
-      pathname: path.join(__dirname, `/dist/index.html`),
+      pathname: path.join(__dirname, `../dist/index.html`),
       protocol: "file:",
       slashes: true,
     })
@@ -43,6 +49,19 @@ app.on("activate", function () {
 });
 
 // Inter-Process Communication //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// ipcMain.on('eventName', (event, arg) => {
-//   // Do things
-// });
+ipcMain.on('minimizeWindow', ( event, arg ) => {
+  console.log('berp')
+  mainWindow.minimize();
+});
+
+ipcMain.on('toggleWindow', ( event, arg ) => {
+  if( mainWindow.isMaximized() ) {
+    mainWindow.restore();
+  } else {
+    mainWindow.maximize();
+  }
+});
+
+ipcMain.on('closeWindow', ( event, arg ) => {
+  mainWindow.close()
+});

@@ -1,12 +1,38 @@
+/* Imports
+__________________________________________________________________ */
+
+@import "reset-css";
+
+/* Variables
+__________________________________________________________________ */
+
 :root {
-  --primary: blue;
-  --secondary: red;
+
+  // Colors
+
+  --color-primary: rgb(64, 51, 83);
+  --color-secondary: rgb(63, 63, 116);
+  --color-accent: rgb(36, 159, 222);
+  --color-success: rgb(90, 181, 82);
+  --color-danger: rgb(236, 39, 63);
+  --color-warning: rgb(243, 168, 51);
+  --color-info: rgb(51, 136, 222);
+  --color-light: rgb(229, 226, 226);
+  --color-dark: rgb(36, 34, 52);
+
+  // Fonts
+
+  --font-title: "metropolis-regular";
+  --font-header: "metropolis-regular";
+  --font-paragraph: "metropolis-regular";
+
 }
 
-body, html {
-  margin: 0;
-  height: 100%;
+/* Base
+__________________________________________________________________ */
+
+html {
   user-select: none;
+  font-family: var(--font-paragraph);
+  background-color: var(--color-white);
 }
-
-

@@ -1,0 +1,26 @@
+<nav class="titlebar">
+
+  <div class="decorator">
+    <div class="drag">
+      <div class="icon"></div>
+      <div class="title">{{appTitle}}</div>
+    </div>
+  </div>
+
+  <div class="window-buttons">
+    <button class="window-button" id="minimize" (click)="minimizeWindow()">
+      <fa-icon [icon]="['fas', 'minus']"></fa-icon>
+    </button>
+    <button class="window-button" id="maximize" (click)="toggleWindow()">
+      <fa-icon [icon]="['far', 'square']"></fa-icon>
+    </button>
+    <button class="window-button" id="close" (click)="closeWindow()">
+      <fa-icon [icon]="['fas', 'times']"></fa-icon>
+    </button>
+  </div>
+
+  <script>
+    console.log('this runs');
+  </script>
+
+</nav>

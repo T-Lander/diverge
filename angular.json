@@ -12,7 +12,7 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -28,8 +28,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
-              "src/assets/fonts/metropolis/fonts-metropolis.css"
+              "src/assets/fonts/fonts.css",
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -92,8 +92,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
-              "src/assets/fonts/metropolis/fonts-metropolis.css"
+              "src/assets/fonts/fonts.css",
+              "src/styles.scss"
             ],
             "scripts": []
           }
