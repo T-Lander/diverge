@@ -17,6 +17,7 @@ import { TitlebarComponent } from './shared/components/titlebar/titlebar.compone
 import { ProjectManagerModule } from './modules/project-manager/project-manager.module';
 import { WorkspaceModule } from './modules/workspace/workspace.module';
 import { IpcService } from './shared/services/ipc/ipc.service';
+import { ProjectService } from './shared/services/project/project.service';
 
 
 @NgModule({
@@ -31,7 +32,7 @@ import { IpcService } from './shared/services/ipc/ipc.service';
     ProjectManagerModule,
     WorkspaceModule,
   ],
-  providers: [IpcService],
+  providers: [IpcService, ProjectService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

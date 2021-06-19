@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IdService } from 'src/app/shared/services/id/id.service';
 
 @Component({
   selector: 'project-manager',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectManagerComponent implements OnInit {
 
-  constructor() { }
+  constructor( private readonly idService: IdService ) {
+
+  }
 
   ngOnInit(): void {
   }
